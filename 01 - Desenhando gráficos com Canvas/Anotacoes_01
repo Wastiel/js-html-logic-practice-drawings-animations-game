@@ -1,0 +1,125 @@
+Aula 01 - Visão Geral
+	- realizar animações e formas
+	- criar um jogo
+	- conhecimento de lógica para aplicar em um novo treinamento.
+	- biblioteca pegar coisas prontas
+	- aprender api de gráfios na tela 
+	- como desenhar na tela
+	- usar bibliotecas java script
+
+Aula 02 - O canvas será nossa tela!
+	- Nao quero escrever HTML
+	- Queremos desenhar
+	- algo para desnhar.
+	- empty canvas para desenhar.
+	- html, canvas serve para desenhar
+	- <canvas> </canvas> - para desenhar
+	- tamanho da tela a ser trabalhada.
+
+Aula 03 - Utilizando APIs
+	-	Como vimos no vídeo, quando criamos um arquivo programa.html, utilizamos algumas linhas de código para dizer ao programa o que ele tem que fazer: desenhar na tela, receber código JavaScript, etc.
+
+	Selecione abaixo a tag de código que utilizamos para criar uma tela de desenho.
+		<canvas></canvas>
+
+Aula 04 - Desenhando com um pincel
+	- Vamos pelo mundo do java script executar este processo. 
+	- javascript pode utilizar tanto aspas duplas quanto aspas simples
+	- passmo o canvas para o java script pela variavel tela
+		var tela = document.querySelector("canvas");
+	- posterior passamos o contexto ao qual queremos escrever 2d, 3d, 4d (dimensoes)
+		var pincel = tela.getContext('2d');
+	- Temos tela e pincel agora podemos escrever na tela.
+	- vamos desenhar um retangulo em tela, com as dimensões do canvas.
+		- pincel.fillRect(); // pedimos para o java script preencher o retangulo. 
+	- vamos fazer o pincel pintar uma determinada coordenada
+		 pincel.fillRect(0, 0); // no plano cartesiano inicamos no eixo x e y, ou seja 0 e 0.
+	- Depois criamos uma forma para trabalho
+		- pincel.fillRect(0, 0, 600, 400);
+	- Como a cor preta é muito forte, criamos uma cor cinza para preencher o nosso retangule. 
+	- utilizamos a propriedade que é diferente de uma função pincel.fillStyle, chamamos ela da seguinte maneira, atribuindo uma caracteristica:
+		- pincel.fillStyle = 'ligthgrey'
+	- Temos que passar a informação de cor antes do preenchermos a tela. 
+	- 
+Aula 05 - Trabalhando com coordenadas
+	- Durante o vídeo usamos fillRect() para desenhar alguns retângulos no canvas. Agora, vamos relembrar como este método funciona.
+
+	Analise as opções abaixo e marque a verdadeira.
+	- O fillRect() precisa de algumas informações para conseguir desenhar o retângulo, que estarão na ordem: posição inicial X do “pincel”, posição inicial Y do “pincel”, posição final X do “pincel”, posição final Y do “pincel”.
+
+Aula 06 - Nossa primeira obra de arte, será? 
+	- Movimentamos o pincel de diferentes maneiras agora
+	Primeiro desenhamos um retangulo verde no inicio do nosso retangulo principal
+	- 	pincel.fillStyle = 'green';
+		pincel.fillRect(0,0, 200, 400);
+	- Posterior pintamos a parte final do nosso programa 
+		pincel.fillStyle = 'red';
+    	pincel.fillRect(400, 0, 200, 400);
+    - Com isto ficamos com uma formação da bandeira da italia com um fundo sinza. 
+
+Aula 07 - A vida não é so feita de retangulos
+	-	Vamos criar um retangulo, vamos iniciar um caminho. pincel vai seguir.
+	- Criamos um retangulo com os seguintes comandos
+		pincel.fillStyle = 'yellow'
+		pincel.beginPath();
+		pincel.moveTo(300,200);
+		pincel.lineTo(200,400);
+		pincel.lineTo(400,400);
+		pincel.fill();
+
+	- Colocamos uma cor
+		- pincel.fillStyle = 'yellow'
+	- comecamos um caminho com o pincel. Como se estivemos preparando para pintar
+		- pincel.beginPath();
+	- Posicionamos o pincel conforme cordenadas
+		pincel.moveTo(300,200); NEste caso movemos para 300 em X e depois 200 em Y, imagine que o cursos esta correndo neste fluxo.
+	- Depois fazemos uma linha até o ponto conforme abaixo:
+		pincel.lineTo(200,400); Movemos até 200 em x, ficar bem em cima do verde da bandeira da italia e depois movemos 400 em y que ficara bem na borda do eixo Y ao final da bandeira da italia. 
+	- Depois fazemos uma linha para fechar o nosso triangulo
+		pincel.lineTo(400,400); - Movemos X para 400 e depois movemos y para 400, isto vai dar bem em cima da linha vermelha da bandeira da italia.
+		Assi o triangulo se forma. POde se executar o programa.html que esta na pasta para entender.
+
+Aula Teste -
+	- Criei uma faixa prenta no meu retangulo. Queria que entender melhor
+		pincel.fillStyle = 'black';
+		pincel.fillRect(0,50, 1000, 200); //sai do exio y e anda 200 pontos. com isto, temo sum retangulo de 250 pontos.value_name: value,
+	- Pintei bem no meio da bandeira da italia.
+
+	- vou fazer um trinagulo, que saia da lateral direita até o centro.
+	Fiz o programa programa_teste.html, que tem mais exepmlos e fica mais entendivel como a movimentação ocorre dentro o canvas. 
+
+Aula 08 - Tem espaço para circulo também.
+	- adicionamos uma nova cor e também comecamos o pincel novamente, pois senao ele continua de onde estava.
+		pincel.fillStyle = 'blue'
+		pincel.beginPath();
+	- Adicionamos o processo de radianos 
+			pincel.fillStyle = 'blue';
+			pincel.beginPath();
+			pincel.arc(300,200, 50, 0, 2 * 3.14);
+			pincel.fill();
+	- Com isto ele ficou na posição e gerou um circulo conforme radianos.
+
+Aula 09 - Funções Canvas API
+	- Até então foram usados termos com a mesma estrutura diversas vezes, como pincel.comando(informação1, informação2, etc), com vários comandos e informações diferentes. Chamamos estas instruções que as bibliotecas (APIs) deixam disponíveis para usarmos em nossos programas de métodos.
+
+	Sabendo disso, analise as afirmações abaixo e marque as verdadeiras.
+
+	- Os métodos moveTo() e lineTo() vistos na aula só podem ser usados não apenas para desenhar triângulos, mas várias outras formas poligonais.
+
+	- Existem diversos métodos diferentes para desenhar. Se for uma forma simples, como um retângulo, podemos usar fillRect(). Porém para formas com mais possibilidades de desenho, vamos precisar utilizar outros métodos.
+
+Aula 10 - Desenhar o creeper.
+	- Aruivo creeper.html
+
+Aula 11 - Esquadro. 
+	-	Desenhar um esquadro. 
+	Comparar as melhores medidas, o que estiver mis perto arquivo dois_tringulos.html
+
+Aula 12 - Ordem e progresso
+	- Desenhar a bandeira do brasil.
+	Arquivo ordem_progresso.html
+
+
+
+
+
