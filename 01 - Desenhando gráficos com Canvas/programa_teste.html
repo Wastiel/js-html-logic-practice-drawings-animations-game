@@ -1,0 +1,56 @@
+
+<canvas width="1000" height="400"></canvas>
+
+<script>
+
+	var tela = document.querySelector("canvas");
+	var pincel = tela.getContext('2d');
+
+	
+	pincel.fillStyle = 'lightgrey';
+	pincel.fillRect(0,0, 1000, 400);
+	
+	pincel.fillStyle = 'green';
+	pincel.fillRect(0,0, 200, 400);
+
+	pincel.fillStyle = 'red';
+	pincel.fillRect(400,0, 200, 400);
+
+
+	pincel.fillStyle = 'yellow'
+	pincel.beginPath();
+	pincel.moveTo(300,200);
+	pincel.lineTo(200,400);
+	pincel.lineTo(400,400);
+	pincel.fill();
+
+
+	pincel.fillStyle = 'yellow';
+	pincel.beginPath();
+	pincel.moveTo(300,200);
+	pincel.lineTo(200,0);
+	pincel.lineTo(400,0);
+	pincel.fill();
+	//Eixo X na horizontal
+	// Eixo y na vertcal
+
+	//pincel.fillStyle = 'black';
+	//pincel.fillRect(0,50, 1000, 200); //sai do exio y e anda 200 pontos. com isto, temo sum //retangulo de 250 pontos.value_name: value,
+
+	pincel.fillStyle = 'yellow';
+	pincel.beginPath();
+	pincel.moveTo(300,200);
+	pincel.lineTo(0,150);
+	pincel.lineTo(0,300);
+	pincel.fill();
+
+
+	pincel.fillStyle = 'yellow';
+	pincel.beginPath();
+	pincel.moveTo(200,200);
+	pincel.lineTo(600,150);
+	pincel.lineTo(600,300);
+	pincel.fill();
+
+
+</script>
