@@ -1,0 +1,121 @@
+Aula 01 - Repetir codigo nao rola
+	- vamos criar alguns quadrados. 
+	- Criamos dois retangulos em sequencia.
+	- pincel.fillStroke = 'black'; - Serve somente para fazer a pintura da borda
+	- pincel.strokeStyle = 'red'; - cria uma borda ao redor de algum dos retngulos.
+	- ciramos uma função para simplismente chamar os quadrados. 
+	- chamamos diversas vezes as funções dos quadrados, mas ops, o que aconteceu, deu problema. 
+
+Aula 02 - fillStroke ou strokeStyle?
+	- Quando não definimos a cor do stroke a cor padrão utilizada é black. No entanto, para mudarmos a cor do stroke para uma cor diferente de preto, precisamos realizar essa operação através da propriedade strokeStyle. Exemplo:
+
+	pincel.strokeStyle = 'red'
+
+	Documentação: - https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#fill_and_stroke_styles
+
+Aula 03 - Uma função mais genérica
+	- Fazer quadradfos, passando função, com parametros mais simples, dos eixos x e y.
+	- Fizemos a seguinte função:
+		desenhaQuardado(0, 0, "blue"); Com isto automatizamos a chamada de quadrados com parametros.
+
+Aula 04 - para que servem funções
+	De acordo com o que aprendemos, funções são muito úteis para resolver problemas durante nosso desenvolvimento.
+
+	Selecione as alternativas com situações em que poderíamos utilizar funções como uma solução.
+
+	Resposta:
+
+	Automatizar tarefas com código mais genérico.
+	
+	Repetição de código.
+
+	Deixar o código organizado e separado.
+
+Aula 05 - Como eu amo esse tall de loop
+	- vamos fazer uma repetição para preencher com quadrados o nosso canvas.
+	- Criamos um while para fazer diversas repetições. e assim preencher a tela com quadrados em diversas coordenadas
+	- 	var x = 0;
+			while(x<600){
+				
+				desenhaQuardado(x, 0, "blue");	
+				desenhaQuardado(x, 50, "green");
+				desenhaQuardado(x, 100, "yellow");
+				x = x + 50;
+
+			}
+	- a ideia desta aula é focar na organização do código, deixando ele mais legivel, organizado, melhor de se ler, ainda mais para quem não é do ambiente de programação.
+
+Aula 6 - Entendendo Loops
+	- Os loops, ou laços de repetição, são uma estrutura básica em programação que usamos para repetir tarefas - lembrando que repetir e automatizar tarefas são algumas das atividades principais que um programa deve fazer.
+
+	Escolha alternativas que demonstrem corretamente o funcionamento dessas estruturas.
+
+	Respostas:
+
+	Todo loop precisa de uma linha de código dentro dele, que serve para mudar a condição atual.
+
+	Loops executam enquanto a condição passada (normalmente entre parênteses()) for verdadeira.
+
+	Os dois loops são escritos de formas diferentes, porém o resultado da execução é o mesmo.
+
+Aula 7 - Loops e funções
+	- Nesta aula, aprendemos sobre as vantagens de se utilizar funções e como unir funções e loops, uma prática muito comum em lógica de programação.
+
+	A partir do que vimos, selecione as alternativas corretas:
+
+
+	Respostas:
+		Os loops podem ser utilizados em conjunto com funções para automatizar algumas tarefas de código
+
+		O valor de x usado como condição para o loop (x = x + 50) é exatamente o mesmo passado como parâmetro para a função desenhaQuadrado(x, 0, ‘green’).
+
+Aula 8 - Uma inofensiva flor...
+	- Desenhar uma flor e conforme resultado, assinalar a resposta correta. 
+	- Errei por não ter criado a função, mas fiz o circulo conforme o do professor.
+	- Mas dentro da fução o professor setou pontos fixos para setar a movimentação da flor. 
+
+Aula 9 - Frações
+	- Ajudando a professora a criar diversos qudrado lado a lado para representar frações.
+
+	- <meta charset="UTF-8">
+			<canvas width="700" height="500"></canvas>
+
+			<script>
+
+			    function desenhaQuadrado(x, y, tamanho, cor) {
+			        var tela = document.querySelector('canvas');
+			        var pincel = tela.getContext('2d');
+
+			        pincel.fillStyle=cor;
+			        pincel.fillRect(x,y, tamanho, tamanho);
+			        pincel.strokeStyle='black';
+			        pincel.strokeRect(x,y, tamanho, tamanho);
+			    }
+
+			    function desenhaTexto(texto, x , y) {
+			        var tela = document.querySelector('canvas');
+			        var pincel = tela.getContext('2d');
+
+			        pincel.font='20px Georgia';
+			        pincel.fillStyle='black';
+			        pincel.fillText(texto, x, y);    
+			    }
+
+
+			    desenhaTexto("Qual é a fração?", 50, 30);
+
+			    var y = 50;
+			    desenhaQuadrado(50, y, 100, 'green');
+			    desenhaQuadrado(150, y, 100, 'green');
+			    desenhaQuadrado(250, y, 100, 'green');
+			    desenhaQuadrado(350, y, 100, 'white');
+
+			</script>
+
+Aula 10 - Gráfico de barras
+	- a ideia era montar o seguinte gráfico com barras: Melhor exercicio até agora
+		-	O exericico está no arquio desenha_barra.html
+
+Aula 11 - Desenhar o esquadro
+	- O professor usou um fluxo diferente do que o meu. Ele calculou quanto deveria ser o retangulo internto.
+	- Eu desenhei o mesmo. Atividade dois_triangulos.html
