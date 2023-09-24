@@ -1,0 +1,48 @@
+Aula 01 - Nosso primeiro jogo
+	- Vamos fazer um jogo acerta o alvo.
+	- utilizando tudo que ja aprendemos até o momento.
+
+Aula 02 - O alvo aleatório.
+	Criamos um programa para movimentar a bolinha conforme cada um segundo, em cordenadas diferentes, tudo porfuncao
+
+Aula 03 - Desenhando no canvas
+	Conforme aprendemos, para desenhar o alvo na tela usamos três vezes a função desenhaCirculo(x, y, raio, cor), e precisamos executá-la na ordem certa para desenhar um alvo.
+
+	
+	Selecione a alternativa com a afirmação correta sobre a ordem para o desenho do alvo.
+
+	A ordem será o maior primeiro e o menor por último.
+
+Aula 4 - Disparando contra o alvo
+	-	Criamos um programa, mei que envolvendo tudo que ja tinhamos feito e adicionamos que ao acertar o alvo, ocorre de exibir na tela um alert, dizendo que acetamos o algo.
+
+Aula 5 - 
+	Vimos no vídeo que ao clicar no canvas, chamamos a função dispara(), e assim teremos acesso à posição do clique do mouse. Porém não saberemos a posição do alvo, representado pelas variáveis xAleatorio e yAleatorio, pois um erro ocorrerá ao tentar acessá-las.
+
+	Selecione a alternativa que resolve esse problema.
+
+	Declarar as variáveis xAleatorio e yAleatorio fora das funções.
+
+
+	- Se declararmos as variáveis fora das funções, poderemos acessar seu valor em qualquer função, inclusive em dispara().
+	- Sortear novos números usando a função sorteiaPosicao().
+	- Retornar as variáveis da função atualizaTela().
+
+	Correto: Se declararmos as variáveis fora das funções, poderemos acessar seu valor em qualquer 
+
+Aula 06 - Executando Sempre
+	-	Com o alvo desenhado em uma posição fixa, como 100 em x e 100 em y, não temos um jogo divertido. Precisamos que a posição do alvo seja diferente a cada vez que jogarmos, o que conseguimos fazer usando a função Math.random(), que vai atribuir um número aleatório para as posições. Porém, teremos que recarregar a página e trocar o alvo de lugar toda vez que formos jogar.
+
+	Selecione a opção com a função que vai fazer essa troca de posições de tempos em tempos, quando for necessário.
+
+	Math.floor().
+	setTimeout().
+	setInterval().
+
+	Resposta correta: setInterval().
+
+Aula 07 - Implemente seu primeiro jogo
+	- Feito anteriormente
+
+Aula 08 - Desenhe obras de arte
+	- Fazer um programa com instruções.
