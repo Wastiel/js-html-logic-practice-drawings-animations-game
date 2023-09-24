@@ -1,0 +1,96 @@
+Aula 01 - Desenhando um circulo, e dai?
+	- desenhar a funcao antes de fazer a mesma para pensar o que ela vai precisar	
+	- criamos uma bolinha com alguns parametros
+	- na proxima aula, vamos aprender a animar esta bolinha.
+
+Aula 02 - Desenhando
+	- limpa os desenhos em tela pincel.clearRect(0, 0, 600, 400); 
+	- Vamos fazer a bolinha andar na tela.
+	- primeiro teste, tivemos problema, pq a bolinha foi tao rapida que deu a impressao de simplesmente aparecer no final da tela. 
+	- No proximo video vamos ver como fazer a bolinha ter a senssão de ver ela andando em tela.
+
+Aula 03 - Animação simples.
+	- passando a função como parametro, para uma chamda do javascript  setInterval(exibeMensagemConsole);
+	- vamos vare a bolinha andar com a determinada função.
+		function atualizaTela(){
+	        limpaTela();
+	        desenhaCirculo(x,20,10);
+	        x++;
+	    }
+
+	        setInterval(atualizaTela, 10);
+	- Criamos a chamda setInterval que olha para a funcao atualizatela e a cada 10 milisegundos faz ela andar.
+
+	- O método setInterval() chama atualizaTela();
+	- Este, quando executado, faz o limpaTela(), desenhaCirculo() e incrementa o valor de x;
+	- O setInterval() aguarda 20 milisegundos, para repetir o processo, sempre incrementando o valor de x, o que faz com que nossa esfera "se mova" para a direita.
+
+Aula 04 - Onde está o erro?
+	-  function atualizaTela() {
+		    var x = 20;
+		    limpaTela();
+		    desenhaCirculo(x, 20, 10);
+		    x++;
+		  }
+	- ela declaraou a movimentação da bolinha, dentro da função, e deve ser declarada fora. 
+
+Aula 05 - Para saber mais - Onde está o erro, mais uma vez?
+	-	Herculando chamando a função da seguinte maneira no set interval
+	-	setInterval(atualizaTela(), 10);
+	O correto teria que ser
+	-	// veja que não há mais o ()
+ 		setInterval(atualizaTela, 10);
+
+Aula 06 - Tudo que vai, volta!
+	- Solicitado que a bolinha va e vennha no programa.
+	- Feito o programa vai_volta.html
+
+Aula 07 -  O pulso ainda pulsa…
+	- Agora a ideia era criar uma bolinha que ficasse crescendo.
+	- Fizemos o programa pulos.html
+
+Aula 08 - Para saber mais - Movendo a bolinha pelo teclado
+	- Fizemos o programa que move a move_bolinha.html
+
+Aula 09 - Bandeiras
+	- Fazer duas bandeiras alternarem entre si a cada alguns segundos.
+	- Fizemos o programa bandeiras.html;
+
+Aula 10 - Nomes de funções e variáveis
+	-	Uma função pode conter muitos parâmetros ou nenhum, como ilustram os códigos:
+	- function atualizaTela() {
+			...
+			    }
+			function desenhaCirculo(x, y, raio) {
+			...
+			    }
+
+	Sabendo disso, analise as afirmações abaixo e marque as verdadeiras em relação às funções no Javascript.
+
+Aula 11 - Lógica
+	- 		a = 100
+			b = 'palavra'
+			c = -50
+
+			if (b.length > 7) {
+			    console.log(b)
+			} else {
+			    console.log(a + c)
+			}
+
+	O que acontecera no console:
+		A saída do console será 50.
+		Um erro informará que não existe length em strings, apenas listas.
+		A saída do console será palavra.
+
+		Neste caso a resposta certa é 50
+
+Aula 12 - Tempo a Tempo
+	-	No Javascript podemos incluir um temporizador para executar algumas funções. Nesta aula, utilizamos a função setInterval().
+
+	Precisamos informar apenas o tempo como parâmetro.
+	Ela só funciona quando estamos utilizando o canva ou desenhando na tela.
+	Esta função requer dois parâmetros obrigatórios.
+
+	Resposta certa: Esta função requer dois parametros obrigatórtios.
+
