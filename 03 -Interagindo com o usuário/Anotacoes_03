@@ -1,0 +1,131 @@
+Aula 01 - Nossa tela está viva, ela responde
+	 - programa_03.html
+	 - interagir com o canvas
+	 - coloco a função dentro do onclick. tela.onclick = exitbeAlerta;
+	 - quem chama a função é o navegador quando eu clico na tela.
+	 - saber qual a posição da tela clicada. 
+	 - navegador sempre passa um paramerto especial, para 
+	 - pegamos os parametros que o navegador esta passando do clique para podermos pegar a posição que em que clicamos. 
+	 - console.log(evento);
+	 - vamos exibir na tela a coordenada, para no futuro podermos construir programas mais complexos.
+
+Aula 02 - Mouse, diga-me em que posição estas
+	-	Interessante da para pegar a propriedade do evento, conforme necessidade
+	Exemplo: 
+			var x = evento.pageX;
+        	var y = evento.pageY;
+
+         	alert(x + " "+ y);
+         Pegaoms as corrdenadas conforme clique do mouse.
+    - Para tirar os espacamentos que sobram da tela, ja que o navegado valida a coordenada pelo navegador todo.
+
+    	var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+
+    - pegamos as cordenadas e começamos a desenhar bolinhas na tela com o comando
+    	-
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x, y, 10, 0,2*3.14)
+        pincel.fill();
+
+Aula 03 - Uma forma diferente de testar um if
+	- var aprendi = true;
+    	if(aprendi == true)
+    - invez de usar o operador, usamos so da seguinte maneira
+    var aprendi = true;
+
+    if(aprendi)
+
+Aula 04 - Trocando de cor
+	-	Fizemos um programa que com o botao direito eu troco a cor que vai aparecer ao clicar com o botao esquerdo.
+	proggrama cor_bolinha.html. Fiz uma logica um pouco diferente da do instrutor, ma cheguei na resposta.
+
+Aula 05 - era uma vez uma bolinha que virou um bolao.
+	conforme clicamos com a tecla shift, vai desenhar bolinhas maiores
+	- programa aumenta_bolinha.html
+
+Aula 06 -  Era uma vez um bolão que quase explodiu!
+	- Agora a ideia é que se clicarmos shift e mudarmos a bolinha ela vai aumentar e nao voltar ao tamanho original.
+	- dois ajustes no aumenta_bolinha, resolvem o nosso problema
+
+		Aumentar o raio
+			 if (evento.shiftKey) {
+     			 raio = raio + 10;
+    		}
+    - setar a variavel raio fora do progresso.
+    	var raio = 10;
+
+Aula 07 - O bolão que deseja emagrecer!
+	- Conforme clicamos no shift e no alt, aumentamos ou diminuimos a bolinha conforme instrução.
+	- programa ajustado - aumenta_bolinha.html.
+
+Aula 08 - Desenhando com o mouse Aula 09 - Funções Anonimas
+	-	Fizemos o programa bolinha pressionada que desenha conforme vamos andando com o mouse.
+	também aprendemos sobre a função anonima
+	- 
+				tela.onmousemove = function(evento) {
+
+        if(desenha) {
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+            pincel.fillStyle = 'blue';
+            pincel.beginPath();
+            pincel.arc(x, y, 10, 0, 2 * 3.14);
+            pincel.fill();
+				        }
+				        console.log(x + ',' + y);
+				    }
+
+				    tela.onmousedown = function() {
+
+				        desenha = true;
+				    }
+
+				     tela.onmouseup = function() {
+
+				        desenha = false;
+				    }
+
+Aula 10 - Desenhando com o mouse em cores infinitas
+	-	Exercicio conforme programa cores_infinitas.html
+
+Aula 11 - Acertando um alvo.
+	- Exericio conforme 
+
+Aula 12 - Funções
+	-	Nessa aula, criamos uma variável chamada pincel, como ilustra o código abaixo:
+
+		var pincel = tela.getContext('2d');COPIAR CÓDIGO
+		Além disso, criamos uma função que exibe um alerta na tela:
+
+		function exibeAlerta() {
+		       alert('Cliquei');
+		    }
+	As variáveis e as funções do exemplo possuem nomes determinados.
+
+Aula 13 - Função com parametros
+	-	Uma pessoa criou uma função para exibir uma saudação como ilustra o código abaixo:
+
+		function exibeSaudacao(nome) {
+		    alert('Olá ' + nome);
+		}
+		exibeSaudacao();COPIAR CÓDIGO
+		Porém, o programa não está funcionando como o esperado. Sempre que ele é executado, o resultado não exibe o nome da pessoa, e sim a mensagem Olá undefined.
+
+		Sabendo disso, analise as afirmações abaixo e marque aquela que contém a solução para esse problema.
+	- Erro: O erro está na chamada da função.
+
+Aula 14 - Retorno de uma função
+	- De modo geral, uma função possui uma série de instruções para executar um único comportamento, assim como a seguinte função e sua chamada:
+
+		function somarDoisValores(valor1, valor2) {
+		    resultadoDaSoma = valor1 + valor2
+		}
+
+		console.log(somarDoisValores(200, 1000))COPIAR CÓDIGO
+		Com base no código acima, analise as afirmações a seguir e assinale a que estiver correta.
+
+		Essa pergunta ficou muito dubia em função de as respostas serem corretas para um código correto. Fugiu do padrão que custam aplicar nas perguntas induzindo ao erro.
+
+
